@@ -8,6 +8,18 @@ var app2 = new Vue({
   el: '#app-2',
   data: {
     message: '页面加载于 ' + new Date().toLocaleString()
+  },
+  beforeCreate: function() {
+    console.log('beforeCreate');
+  },
+  created: function() {
+    console.log('message is: ' + this.message);
+  },
+  beforeMount: function() {
+    console.log('beforeMount');
+  },
+  mounted: function() {
+    console.log('mounted');
   }
 });
 var app3 = new Vue({
