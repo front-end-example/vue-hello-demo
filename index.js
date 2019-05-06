@@ -9,6 +9,11 @@ var app2 = new Vue({
   data: {
     message: '页面加载于 ' + new Date().toLocaleString()
   },
+  computed: {
+    now: function() {
+      return '页面加载于 ' + new Date().toLocaleString()
+    }
+  },
   beforeCreate: function() {
     console.log('beforeCreate');
   },
@@ -45,7 +50,8 @@ var app5 = new Vue({
   },
   methods: {
     reverseMessage: function() {
-      this.message = this.message.split(' ').reverse().join('');
+      // this.message = this.message.split('').reverse().join('');
+      return this.message.split('').reverse().join('');
     }
   }
 });

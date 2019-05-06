@@ -9,9 +9,16 @@
     </div>
     <div id="app-2">
       <!-- v-bind 特性被称为指令。指令带有前缀 v-，以表示它们是 Vue 提供的特殊特性。 -->
-      <span v-bind:title="message">
-        鼠标悬停几秒钟查看此处动态绑定的提示信息！
-      </span>
+      <p>
+        <span v-bind:title="message">
+          普通属性：鼠标悬停几秒钟查看此处动态绑定的提示信息！
+        </span>
+      </p>
+      <p>
+        <span v-bind:title="now">
+          计算属性：鼠标悬停几秒钟查看此处动态绑定的提示信息！
+        </span>
+      </p>
     </div>
     <div id="app-3">
       <p v-if="seen">现在你看到我了</p>
@@ -24,7 +31,8 @@
       </ol>
     </div>
     <div id="app-5">
-      <p>{{ message }}</p>
+      <!-- <p>{{ message }}</p> -->
+      <p>{{ reverseMessage() }}</p>
       <button v-on:click="reverseMessage">Reverse Message</button>
     </div>
     <div id="app-6">
